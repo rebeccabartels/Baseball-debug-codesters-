@@ -1,0 +1,26 @@
+stage.set_background("baseballfield")
+sprite = codesters.Sprite("athlete2")
+sprite.set_size(.5)
+sprite.go_to(0, -200)
+
+number_bases = random.randint(1, 4)
+bases_display = codesters.Display(number_bases)
+
+if number_bases == 1:
+    sprite.glide_to(220, 0)
+
+if number_bases == 2:
+    sprite.glide_to(220, 0)
+    sprite.glide_to(0, 200)
+
+if number_bases == 3:
+    sprite.glide_to(220, 0)
+    sprite.glide_to(0, 200)
+    sprite.glide_to(-220, 0)
+
+if number_bases == 4:
+    sprite.glide_to(220, 0)
+    sprite.glide_to(0, 200)
+    sprite.glide_to(-220, 0)
+    sprite.glide_to(0, -200)
+    sprite.turn_right(720)
